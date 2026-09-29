@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#a91622">
+<meta name="description" content="Site oficial da Igreja Batista Renovada de Campoane — Boane, Maputo, Moçambique.">
+<title>Igreja Batista Renovada de Campoane</title>
+<style>
+:root{
+  --red:#a91622; --red-dark:#7d0f18; --red-soft:#f9e9eb;
+  --gold:#c58b38; --ink:#171717; --muted:#666; --paper:#fff;
+  --line:#eadede; --shadow:0 18px 50px rgba(56,15,18,.10);
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.topbar{background:#151515;color:#fff;font-size:.9rem}
+.topbar .container{display:flex;justify-content:space-between;gap:15px;padding:9px 0;flex-wrap:wrap}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800}
+.brand img{width:58px;height:58px;object-fit:cover;border-radius:50%;border:2px solid #eee}
+.brand span{line-height:1.15}
+.brand small{display:block;font-weight:500;color:var(--muted);margin-top:4px}
+.menu{display:flex;gap:24px;align-items:center;font-weight:700;font-size:.95rem}
+.menu a:hover{color:var(--red)}
+.cta{background:var(--red);color:#fff;padding:11px 18px;border-radius:999px}
+.cta:hover{background:var(--red-dark);color:#fff}
+.hero{position:relative;overflow:hidden;background:
+ radial-gradient(circle at 85% 15%,rgba(197,139,56,.25),transparent 27%),
+ linear-gradient(135deg,#fff 0%,#fff7f7 52%,#f8e7e9 100%);
+}
+.hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(169,22,34,.14);border-radius:50%;right:-130px;bottom:-220px}
+.hero-inner{min-height:610px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:45px;padding:70px 0}
+.kicker{color:var(--red);font-weight:900;letter-spacing:.12em;text-transform:uppercase;font-size:.82rem}
+h1{font-family:Georgia,serif;font-size:clamp(2.7rem,6vw,5rem);line-height:1.02;margin:12px 0 20px}
+h1 em{font-style:normal;color:var(--red)}
+.hero p{font-size:1.12rem;color:#555;max-width:650px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:13px 20px;border-radius:10px;font-weight:800;display:inline-flex;align-items:center;gap:8px}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 8px 22px rgba(169,22,34,.22)}
+.btn-secondary{border:1px solid #d9b8bc;background:#fff;color:var(--red)}
+.hero-logo{display:flex;justify-content:center;align-items:center}
+.logo-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:var(--shadow);transform:rotate(1deg)}
+.logo-card img{display:block;width:min(420px,72vw);max-height:360px;object-fit:contain}
+.verse{padding:22px 25px;border-left:5px solid var(--gold);background:#fff;margin-top:30px;border-radius:0 14px 14px 0;box-shadow:0 8px 25px rgba(0,0,0,.05);font-family:Georgia,serif;font-size:1.1rem}
+.verse strong{display:block;margin-top:8px;font-family:Inter,Arial,sans-serif;font-size:.9rem;color:var(--red)}
+section{padding:82px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 42px}
+.section-head .kicker{margin-bottom:8px}
+h2{font-family:Georgia,serif;font-size:clamp(2rem,4vw,3rem);margin:0 0 12px}
+.section-head p{color:var(--muted);margin:0}
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 8px 30px rgba(0,0,0,.045)}
+.card h3{margin-top:0;font-family:Georgia,serif;font-size:1.5rem}
+.quote-card{background:var(--red);color:#fff;border:0}
+.quote-card p{font-family:Georgia,serif;font-size:1.3rem}
+.quote-card strong{color:#ffd99a}
+.schedule{background:#faf7f7}
+.schedule-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.day{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;position:relative;overflow:hidden}
+.day:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--red)}
+.day .tag{font-size:.78rem;color:var(--red);font-weight:900;letter-spacing:.08em}
+.day h3{margin:5px 0 8px}
+.time{font-weight:800}
+.small{color:var(--muted);font-size:.92rem}
+.leadership{background:#fff}
+.people{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.person{text-align:center;padding:30px 20px;border:1px solid var(--line);border-radius:20px;background:#fff}
+.avatar{width:76px;height:76px;border-radius:50%;margin:0 auto 15px;background:var(--red-soft);display:grid;place-items:center;color:var(--red);font-size:1.5rem;font-weight:900}
+.person h3{margin:5px 0;font-family:Georgia,serif}
+.role{color:var(--muted);margin-bottom:12px}
+.phone{display:inline-block;color:var(--red);font-weight:800}
+.map-section{background:linear-gradient(135deg,#171717,#2a1a1c);color:#fff}
+.map-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px;align-items:stretch}
+.map-card{background:#241b1d;border:1px solid #4b3437;border-radius:20px;padding:30px}
+.map-card p{color:#ddd}
+.map-frame{min-height:350px;border-radius:20px;overflow:hidden;border:1px solid #4b3437;background:#eee}
+.map-frame iframe{width:100%;height:100%;min-height:350px;border:0}
+footer{background:#0e0e0e;color:#ddd;padding:40px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+footer h3{color:#fff;margin-top:0}
+footer a{color:#fff}
+.footer-bottom{border-top:1px solid #333;margin-top:30px;padding-top:18px;color:#aaa;font-size:.85rem;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.mobile-toggle{display:none;border:1px solid var(--line);background:#fff;border-radius:9px;padding:9px 12px;font-size:1.2rem}
+@media(max-width:850px){
+ .menu{display:none}.mobile-toggle{display:block}
+ .nav-inner{min-height:70px}
+ .hero-inner{grid-template-columns:1fr;padding:55px 0}
+ .hero-logo{order:-1}.logo-card img{width:min(330px,75vw)}
+ .about-grid,.map-grid{grid-template-columns:1fr}
+ .schedule-grid{grid-template-columns:1fr 1fr}
+ .people{grid-template-columns:1fr}
+ .footer-grid{grid-template-columns:1fr}
+}
+@media(max-width:540px){
+ .topbar .container{justify-content:center;text-align:center}
+ .brand span{font-size:.9rem}.brand small{font-size:.72rem}
+ .schedule-grid{grid-template-columns:1fr}
+ section{padding:60px 0}
+ .hero-inner{min-height:auto}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="container">
+    <span>📍 Boane, Maputo, Moçambique</span>
+    <span>“Encontrar Paz, Esperança e Vida em Cristo”</span>
+  </div>
+</div>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="brand" href="#inicio">
+      <img src="logo.jpg" alt="Logotipo da Igreja Batista Renovada de Campoane">
+      <span>Igreja Batista Renovada<small>de Campoane</small></span>
+    </a>
+    <div class="menu">
+      <a href="#inicio">Início</a>
+      <a href="#cultos">Cultos</a>
+      <a href="#lideranca">Contactos</a>
+      <a href="#mapa">Mapa</a>
+      <a class="cta" href="#visite">Visite-nos</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu" style="display:none;padding:0 4% 15px">
+    <div style="display:grid;gap:10px">
+      <a href="#inicio" onclick="toggleMenu()">Início</a>
+      <a href="#cultos" onclick="toggleMenu()">Cultos</a>
+      <a href="#lideranca" onclick="toggleMenu()">Contactos</a>
+      <a href="#mapa" onclick="toggleMenu()">Mapa</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section id="inicio" class="hero">
+  <div class="container hero-inner">
+    <div>
+      <div class="kicker">Bem-vindo à nossa igreja</div>
+      <h1>Igreja Batista Renovada <em>de Campoane</em></h1>
+      <p>Um lugar para adorar a Deus, crescer na Palavra, viver em comunhão e anunciar o Evangelho de Jesus Cristo.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#cultos">📖 Ver programação</a>
+        <a class="btn btn-secondary" href="#mapa">📍 Como chegar</a>
+      </div>
+      <div class="verse">
+        “Porque dele, e por ele, e para ele são todas as coisas; glória, pois, a ele eternamente. Amém.”
+        <strong>Romanos 11:36</strong>
+      </div>
+    </div>
+    <div class="hero-logo">
+      <div class="logo-card"><img src="logo.jpg" alt="Logo IBRC"></div>
+    </div>
+  </div>
+</section>
+
+<section id="visite" class="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Quem somos</div>
+      <h2>Um lugar para encontrar paz, esperança e vida</h2>
+      <p>Somos a Igreja Batista Renovada de Campoane, localizada em Boane, Maputo, Moçambique.</p>
+    </div>
+    <div class="about-grid">
+      <div class="card">
+        <h3>Uma comunidade de fé</h3>
+        <p>Reunimo-nos para louvar a Deus, orar, estudar a Sua Palavra e fortalecer a comunhão entre irmãos. Todos são convidados a conhecer a mensagem de Jesus Cristo e a caminhar na fé.</p>
+        <p><strong>Local:</strong> Boane, Maputo, Moçambique</p>
+      </div>
+      <div class="card quote-card">
+        <h3>Por isso diz o Soberano, o Senhor</h3>
+        <p>“Eis que ponho em Sião uma pedra, uma pedra já experimentada, uma preciosa pedra angular para alicerce seguro; aquele que confia, jamais será abalado.”</p>
+        <strong>Isaías 28:16</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cultos" class="schedule">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Programação dos cultos</div>
+      <h2>Junte-se a nós durante a semana</h2>
+      <p>Momentos de louvor, oração, comunhão e estudo da Palavra de Deus.</p>
+    </div>
+    <div class="schedule-grid">
+      <div class="day"><div class="tag">DOMINGO</div><h3>Culto</h3><div class="time">09:00 – 10:00</div><p class="small">Intervalo: 10:00 – 10:05</p><h3>Escola Bíblica Dominical</h3><div class="time">10:05 – 11:00</div></div>
+      <div class="day"><div class="tag">SEGUNDA-FEIRA</div><h3>Homens Intercessores</h3><div class="time">17:00 – 18:00</div></div>
+      <div class="day"><div class="tag">TERÇA-FEIRA</div><h3>Culto de Oração</h3><div class="time">17:30 – 18:30</div></div>
+      <div class="day"><div class="tag">QUINTA-FEIRA</div><h3>Culto de Estudo da Palavra</h3><div class="time">17:30 – 18:30</div></div>
+      <div class="day"><div class="tag">SEXTA-FEIRA</div><h3>Homens Intercessores</h3><div class="time">17:00 – 18:00</div></div>
+      <div class="day"><div class="tag">SÁBADO</div><h3>Culto Jovem</h3><div class="time">15:00 – 16:00</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="lideranca" class="leadership">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Nossos pastores e liderança</div>
+      <h2>Estamos aqui para servir</h2>
+      <p>Entre em contacto connosco para informações, oração e orientação.</p>
+    </div>
+    <div class="people">
+      <div class="person"><div class="avatar">PJ</div><h3>Pastor Joca</h3><div class="role">Pastor</div><a class="phone" href="tel:+258846298582">+258 84 629 8582</a></div>
+      <div class="person"><div class="avatar">PV</div><h3>Pastor Victor</h3><div class="role">Pastor</div><a class="phone" href="tel:+258849545140">+258 84 954 5140</a></div>
+      <div class="person"><div class="avatar">BC</div><h3>Boaventura Cossa</h3><div class="role">Líder da Mocidade</div><a class="phone" href="tel:+258843896294">+258 84 389 6294</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="mapa" class="map-section">
+  <div class="container map-grid">
+    <div class="map-card">
+      <div class="kicker" style="color:#ffd99a">Onde estamos</div>
+      <h2>Venha nos visitar</h2>
+      <p><strong>Igreja Batista Renovada de Campoane</strong></p>
+      <p>Boane, Maputo, Moçambique</p>
+      <p>Use o mapa para encontrar o local da igreja e planear a sua chegada.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="https://maps.app.goo.gl/BzcAwUKYiMeGEF1k8" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>
+      </div>
+    </div>
+    <div class="map-frame">
+      <iframe src="https://www.google.com/maps?q=https://maps.app.goo.gl/BzcAwUKYiMeGEF1k8&output=embed" loading="lazy" allowfullscreen title="Localização da Igreja Batista Renovada de Campoane"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><h3>Igreja Batista Renovada de Campoane</h3><p>Encontrar Paz, Esperança e Vida em Cristo.</p><p>Boane, Maputo, Moçambique.</p></div>
+      <div><h3>Navegação</h3><p><a href="#inicio">Início</a></p><p><a href="#cultos">Cultos</a></p><p><a href="#lideranca">Contactos</a></p><p><a href="#mapa">Mapa</a></p></div>
+      <div><h3>Contacto</h3><p><a href="tel:+258846298582">Pastor Joca</a></p><p><a href="tel:+258849545140">Pastor Victor</a></p><p><a href="tel:+258843896294">Líder da Mocidade</a></p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Igreja Batista Renovada de Campoane</span><span>“A Deus seja toda a glória.”</span></div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+ const m=document.getElementById('mobileMenu');
+ m.style.display=(m.style.display==='none'||!m.style.display)?'block':'none';
+}
+</script>
+</body>
+</html>
